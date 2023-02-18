@@ -23,8 +23,8 @@ class PersonsListViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "person", for: indexPath)
-        var content = cell.defaultContentConfiguration()
         let person = persons[indexPath.row]
+        var content = cell.defaultContentConfiguration()
         
         content.text = person.fullName
         cell.contentConfiguration = content

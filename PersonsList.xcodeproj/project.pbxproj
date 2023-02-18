@@ -16,6 +16,8 @@
 		6A9989CF29A103BA0083BEEB /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A9989CE29A103BA0083BEEB /* DataStore.swift */; };
 		6A9989D129A103C70083BEEB /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A9989D029A103C70083BEEB /* Person.swift */; };
 		6A9989D329A115B90083BEEB /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A9989D229A115B90083BEEB /* DetailsViewController.swift */; };
+		6A9989D529A119ED0083BEEB /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A9989D429A119ED0083BEEB /* TabBarViewController.swift */; };
+		6A9989D729A11AF00083BEEB /* ExtendedListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A9989D629A11AF00083BEEB /* ExtendedListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		6A9989CE29A103BA0083BEEB /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
 		6A9989D029A103C70083BEEB /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		6A9989D229A115B90083BEEB /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		6A9989D429A119ED0083BEEB /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		6A9989D629A11AF00083BEEB /* ExtendedListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtendedListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,8 +89,10 @@
 		6A9989CA29A1037B0083BEEB /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				6A9989D429A119ED0083BEEB /* TabBarViewController.swift */,
 				6A9989C829A103670083BEEB /* PersonsListViewController.swift */,
 				6A9989D229A115B90083BEEB /* DetailsViewController.swift */,
+				6A9989D629A11AF00083BEEB /* ExtendedListViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -191,6 +197,8 @@
 				6A9989B429A102BB0083BEEB /* AppDelegate.swift in Sources */,
 				6A9989CF29A103BA0083BEEB /* DataStore.swift in Sources */,
 				6A9989D329A115B90083BEEB /* DetailsViewController.swift in Sources */,
+				6A9989D529A119ED0083BEEB /* TabBarViewController.swift in Sources */,
+				6A9989D729A11AF00083BEEB /* ExtendedListViewController.swift in Sources */,
 				6A9989B629A102BB0083BEEB /* SceneDelegate.swift in Sources */,
 				6A9989C929A103670083BEEB /* PersonsListViewController.swift in Sources */,
 			);

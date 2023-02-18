@@ -9,7 +9,6 @@ import UIKit
 
 class DetailsViewController: UIViewController {
     
-    
     @IBOutlet var infoLabel: UILabel!
     
     var person: Person!

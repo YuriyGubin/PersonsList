@@ -3,14 +3,15 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
+        <!--Persons List-->
         <scene sceneID="I50-IJ-BVw">
             <objects>
-                <tableViewController id="itY-wM-TyL" sceneMemberID="viewController">
+                <tableViewController id="itY-wM-TyL" customClass="PersonsListViewController" customModule="PersonsList" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="FWW-Bi-ECg">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -23,6 +24,9 @@
                                     <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="AsD-eT-J8J" kind="show" id="eyC-l5-MEv"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -30,18 +34,50 @@
                             <outlet property="delegate" destination="itY-wM-TyL" id="ohx-5K-P40"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="guv-el-yTM"/>
+                    <navigationItem key="navigationItem" title="Persons List" id="guv-el-yTM"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Isg-Ra-TxC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-151" y="74"/>
         </scene>
+        <!--Details View Controller-->
+        <scene sceneID="aiZ-N1-Qfa">
+            <objects>
+                <viewController id="AsD-eT-J8J" customClass="DetailsViewController" customModule="PersonsList" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ktz-Er-eIw">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aa5-I7-gQh">
+                                <rect key="frame" x="50" y="175" width="293" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="KoQ-nq-TE2"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Aa5-I7-gQh" firstAttribute="top" secondItem="KoQ-nq-TE2" secondAttribute="top" constant="20" id="F8X-y0-pL0"/>
+                            <constraint firstItem="KoQ-nq-TE2" firstAttribute="trailing" secondItem="Aa5-I7-gQh" secondAttribute="trailing" constant="50" id="bcT-eg-pWH"/>
+                            <constraint firstItem="Aa5-I7-gQh" firstAttribute="leading" secondItem="KoQ-nq-TE2" secondAttribute="leading" constant="50" id="k6C-CR-KsW"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="QK0-yg-Yvg"/>
+                    <connections>
+                        <outlet property="infoLabel" destination="Aa5-I7-gQh" id="9Km-cC-0dq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PWa-Kp-hHd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="634" y="74"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="lZ0-i9-iXJ">
             <objects>
                 <navigationController id="zmg-AT-cku" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="vZk-Ng-FF7">
-                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="vZk-Ng-FF7">
+                        <rect key="frame" x="0.0" y="59" width="393" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>

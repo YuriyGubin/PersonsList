@@ -37,12 +37,12 @@ struct Person {
                 Person(
                 name: shuffledNames[index],
                 surname: shuffledSurnames[index],
-                phoneNumber: shuffledEmails[index],
-                email: shuffledphoneNumbers[index]
+                phoneNumber: shuffledphoneNumbers[index],
+                email: shuffledEmails[index]
                 )
             )
         }
             
-        return persons
+        return persons.shuffled()
     }
 }

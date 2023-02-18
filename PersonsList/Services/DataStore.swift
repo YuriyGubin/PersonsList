@@ -5,7 +5,7 @@
 //  Created by Yuriy on 18.02.2023.
 //
 
-struct DataStore {
+class DataStore {
     
     static let shared = DataStore()
     
